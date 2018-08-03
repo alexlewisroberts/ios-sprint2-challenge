@@ -52,6 +52,7 @@ class ShoppingListViewController: UICollectionViewController, UITableViewDelegat
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		let shoppingItem = shoppingItemController.shoppingList[indexPath.row]
 		shoppingItemController.UpdateIsAdded(shoppingItem: shoppingItem)
+		shoppingItemController.saveToPersistentStore()
 		collectionView.reloadData()
 	}
 	
