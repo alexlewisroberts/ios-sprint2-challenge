@@ -30,6 +30,4 @@ class ShoppingListViewCell: UICollectionViewCell {
 	
 	@IBOutlet weak var descriptionLabel: UILabel!
 	
-	
-	
 }

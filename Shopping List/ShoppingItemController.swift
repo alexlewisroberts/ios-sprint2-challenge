@@ -35,7 +35,7 @@ class ShoppingItemController {
 			let data = try encoder.encode(shoppingList)
 			try data.write(to: url)
 		} catch {
-			NSLog("Error saving stars data: \(error)")
+			NSLog("Error saving shopping list data: \(error)")
 		}
 		
 	}
