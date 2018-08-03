@@ -15,7 +15,7 @@ class ShoppingListViewCell: UICollectionViewCell {
 		imageView.image = UIImage(named: imageName)!
 		descriptionLabel.text = shoppingItem?.name
 		guard let isAdded = shoppingItem?.isAdded else { return }
-		isAddedButtonText.setTitle(isAdded ? "Added" : "Not Added", for: .normal)
+		isAddedLabel.text = isAdded ? "Added" : "Not Added"
 	}
 	
 	var shoppingItem: ShoppingItem? {
@@ -24,12 +24,7 @@ class ShoppingListViewCell: UICollectionViewCell {
 		}
 	}
 	
-
-	@IBAction func toggleIsAdded(_ sender: Any) {
-		guard let isAdded = shoppingItem?.isAdded else { return }
-		shoppingItem?.isAdded = !isAdded
-	}
-	@IBOutlet weak var isAddedButtonText: UIButton!
+	@IBOutlet weak var isAddedLabel: UILabel!
 	
 	@IBOutlet weak var imageView: UIImageView!
 	

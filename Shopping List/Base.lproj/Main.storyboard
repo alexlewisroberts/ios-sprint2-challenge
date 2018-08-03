@@ -32,8 +32,14 @@
                                     <rect key="frame" x="0.0" y="0.0" width="182" height="171"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XyO-hq-BBu">
+                                            <rect key="frame" x="0.0" y="0.0" width="182" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="lEl-sF-28i">
-                                            <rect key="frame" x="0.0" y="38" width="182" height="104"/>
+                                            <rect key="frame" x="0.0" y="29" width="182" height="113"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qy-di-8xT">
                                             <rect key="frame" x="0.0" y="150" width="182" height="21"/>
@@ -41,31 +47,24 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFs-e6-Iox">
-                                            <rect key="frame" x="0.0" y="0.0" width="182" height="30"/>
-                                            <state key="normal" title="Button"/>
-                                            <connections>
-                                                <action selector="toggleIsAdded:" destination="Y3S-Nj-pAC" eventType="touchUpInside" id="i2O-87-iOy"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="XyO-hq-BBu" secondAttribute="trailing" id="02f-mK-Gwk"/>
                                     <constraint firstItem="4qy-di-8xT" firstAttribute="leading" secondItem="Y3S-Nj-pAC" secondAttribute="leading" id="BJC-rG-2tc"/>
                                     <constraint firstAttribute="bottom" secondItem="4qy-di-8xT" secondAttribute="bottom" id="Hn2-3P-qbj"/>
                                     <constraint firstAttribute="trailing" secondItem="4qy-di-8xT" secondAttribute="trailing" id="LTm-8R-69h"/>
-                                    <constraint firstAttribute="trailing" secondItem="gFs-e6-Iox" secondAttribute="trailing" id="hN3-Rr-25T"/>
-                                    <constraint firstItem="gFs-e6-Iox" firstAttribute="top" secondItem="Y3S-Nj-pAC" secondAttribute="top" id="lMT-IW-euE"/>
+                                    <constraint firstItem="XyO-hq-BBu" firstAttribute="leading" secondItem="Y3S-Nj-pAC" secondAttribute="leading" id="Lj0-nr-IqH"/>
+                                    <constraint firstItem="lEl-sF-28i" firstAttribute="top" secondItem="XyO-hq-BBu" secondAttribute="bottom" constant="8" symbolic="YES" id="PWT-Sk-y0y"/>
                                     <constraint firstAttribute="trailing" secondItem="lEl-sF-28i" secondAttribute="trailing" id="n10-Cw-WIB"/>
+                                    <constraint firstItem="XyO-hq-BBu" firstAttribute="top" secondItem="Y3S-Nj-pAC" secondAttribute="top" id="nO6-m8-MGI"/>
                                     <constraint firstItem="lEl-sF-28i" firstAttribute="leading" secondItem="Y3S-Nj-pAC" secondAttribute="leading" id="niA-Qg-hB6"/>
                                     <constraint firstItem="4qy-di-8xT" firstAttribute="top" secondItem="lEl-sF-28i" secondAttribute="bottom" constant="8" symbolic="YES" id="o9q-5f-Yw2"/>
-                                    <constraint firstItem="lEl-sF-28i" firstAttribute="top" secondItem="gFs-e6-Iox" secondAttribute="bottom" constant="8" symbolic="YES" id="rYC-uA-8Jl"/>
-                                    <constraint firstItem="gFs-e6-Iox" firstAttribute="leading" secondItem="Y3S-Nj-pAC" secondAttribute="leading" id="z7x-21-NJd"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="4qy-di-8xT" id="fLf-v8-N2d"/>
                                     <outlet property="imageView" destination="lEl-sF-28i" id="bM4-zW-BCf"/>
-                                    <outlet property="isAddedButtonText" destination="gFs-e6-Iox" id="7W8-zy-yYf"/>
+                                    <outlet property="isAddedLabel" destination="XyO-hq-BBu" id="rOf-Yx-1SX"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
