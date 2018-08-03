@@ -19,8 +19,19 @@ class CheckoutViewController: UIViewController {
 				items = items + 1
 			}
 		}
-        numberOfItemsLabel.text = "You have " + String(items) + " items in your bag."
+		numberOfItemsLabel.text = "You have " + String(items) + " items in your bag."
     }
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		var items = 0
+		shoppingItemController.shoppingList.forEach{item in
+			if item.isAdded {
+				items = items + 1
+			}
+		}
+		numberOfItemsLabel.text = "You have " + String(items) + " items in your bag."
+	}
 
 	@IBAction func triggerNotification(_ sender: Any) {
 		let content = UNMutableNotificationContent()
