@@ -48,6 +48,14 @@ class ShoppingListViewController: UICollectionViewController {
 		
 	}
 	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "checkoutSegue" {
+			if let vc = segue.destination as? CheckoutViewController {
+				vc.shoppingItemController = shoppingItemController
+			} else { return }
+		}
+	}
+	
 	
 	let itemNames = ["apple", "grapes", "milk", "muffin", "popcorn", "soda", "strawberries"]
 	let shoppingItemController = ShoppingItemController()

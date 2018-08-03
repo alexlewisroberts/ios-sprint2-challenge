@@ -76,7 +76,7 @@
                     <navigationItem key="navigationItem" title="Shopping List" id="68Y-6X-Mhb">
                         <barButtonItem key="rightBarButtonItem" title="Check Out" id="kdg-RX-Wer">
                             <connections>
-                                <segue destination="ppp-SB-oxj" kind="show" id="Auv-7X-2wd"/>
+                                <segue destination="ppp-SB-oxj" kind="show" identifier="checkoutSegue" id="Auv-7X-2wd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

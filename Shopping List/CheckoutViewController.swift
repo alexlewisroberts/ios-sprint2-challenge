@@ -41,4 +41,7 @@ class CheckoutViewController: UIViewController {
 	@IBOutlet weak var enterAddressTextField: UITextField!
 	
 	@IBOutlet weak var numberOfItemsLabel: UILabel!
+	
+	var shoppingItemController = ShoppingItemController()
+
 }
