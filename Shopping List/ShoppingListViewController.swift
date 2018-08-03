@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class ShoppingListViewController: UICollectionViewController {
+class ShoppingListViewController: UICollectionViewController, UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +48,13 @@ class ShoppingListViewController: UICollectionViewController {
 		
 	}
 	
+	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+		let shoppingItem = shoppingItemController.shoppingList[indexPath.row]
+		shoppingItemController.UpdateIsAdded(shoppingItem: shoppingItem)
+		collectionView.reloadData()
+	}
+	
+	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == "checkoutSegue" {
 			if let vc = segue.destination as? CheckoutViewController {
@@ -56,8 +63,7 @@ class ShoppingListViewController: UICollectionViewController {
 		}
 	}
 	
-	
 	let itemNames = ["apple", "grapes", "milk", "muffin", "popcorn", "soda", "strawberries"]
-	let shoppingItemController = ShoppingItemController()
+	var shoppingItemController = ShoppingItemController()
 
 }
