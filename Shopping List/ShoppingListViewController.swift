@@ -14,12 +14,12 @@ class ShoppingListViewController: UICollectionViewController, UITableViewDelegat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		if shoppingItemController.shoppingList.count != itemNames.count {
-			for item in itemNames {
-				_ = shoppingItemController.createShoppingItem(imageName: item, name: item, isAdded: false)
-			}
-			shoppingItemController.saveToPersistentStore()
-		} else { return }
+		//if shoppingItemController.shoppingList.count != itemNames.count {
+		for item in itemNames {
+				shoppingItemController.createShoppingItem(imageName: item, name: item, isAdded: false)
+		}
+		shoppingItemController.saveToPersistentStore()
+		//} else { return }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

@@ -14,10 +14,13 @@ class ShoppingItemController {
 		loadFromPersistentStore()
 	}
 	
-	func createShoppingItem(imageName: String, name: String, isAdded: Bool) -> ShoppingItem {
-		let shoppingItem = ShoppingItem(imageName: imageName, name: name, isAdded: isAdded)
-		shoppingList.append(shoppingItem)
-		return shoppingItem
+	func createShoppingItem(imageName: String, name: String, isAdded: Bool) {
+		let itemKey = name
+		if userdefaults.string(forKey: itemKey) != "Exists" {
+			userdefaults.set("Exists", forKey: itemKey)
+			let shoppingItem = ShoppingItem(imageName: imageName, name: name, isAdded: isAdded)
+			shoppingList.append(shoppingItem)
+		} else { return }
 	}
 	
 	func UpdateIsAdded(shoppingItem: ShoppingItem) {
@@ -62,4 +65,6 @@ class ShoppingItemController {
 	// MARK: - Properties
 	
 	private(set) var shoppingList: [ShoppingItem] = []
+	let userdefaults = UserDefaults.standard
+
 }
