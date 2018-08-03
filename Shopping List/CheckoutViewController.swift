@@ -13,8 +13,13 @@ class CheckoutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		var items = 0
+		shoppingItemController.shoppingList.forEach{item in
+			if item.isAdded {
+				items = items + 1
+			}
+		}
+        numberOfItemsLabel.text = "You have " + String(items) + " items in your bag."
     }
 
 	@IBAction func triggerNotification(_ sender: Any) {

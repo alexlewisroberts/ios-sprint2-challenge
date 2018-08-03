@@ -105,16 +105,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKd-tv-4ue">
-                                <rect key="frame" x="166" y="283" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKd-tv-4ue">
+                                <rect key="frame" x="16" y="283" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enR-Rd-skO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enR-Rd-skO">
                                 <rect key="frame" x="125" y="337" width="124" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Schedule Delivery"/>
                                 <connections>
                                     <action selector="triggerNotification:" destination="ppp-SB-oxj" eventType="touchUpInside" id="JjQ-QQ-d2U"/>
@@ -123,8 +121,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="1CS-87-BZ9" firstAttribute="trailing" secondItem="OKd-tv-4ue" secondAttribute="trailing" constant="16" id="1Rx-nP-qib"/>
                             <constraint firstItem="ia0-QK-03X" firstAttribute="top" secondItem="1CS-87-BZ9" secondAttribute="top" constant="91" id="6z9-iH-0xm"/>
+                            <constraint firstItem="OKd-tv-4ue" firstAttribute="top" secondItem="19S-o9-AuX" secondAttribute="bottom" constant="37" id="ESe-Xj-bYd"/>
                             <constraint firstItem="19S-o9-AuX" firstAttribute="leading" secondItem="1CS-87-BZ9" secondAttribute="leading" constant="16" id="Ip4-RN-5bw"/>
+                            <constraint firstItem="OKd-tv-4ue" firstAttribute="leading" secondItem="1CS-87-BZ9" secondAttribute="leading" constant="16" id="Kgd-Z6-ga2"/>
+                            <constraint firstItem="enR-Rd-skO" firstAttribute="top" secondItem="OKd-tv-4ue" secondAttribute="bottom" constant="33" id="LlH-Gq-92h"/>
+                            <constraint firstItem="OKd-tv-4ue" firstAttribute="centerX" secondItem="enR-Rd-skO" secondAttribute="centerX" id="RWz-nF-9ol"/>
                             <constraint firstItem="ia0-QK-03X" firstAttribute="leading" secondItem="1CS-87-BZ9" secondAttribute="leading" constant="16" id="b3v-Re-RuW"/>
                             <constraint firstItem="19S-o9-AuX" firstAttribute="top" secondItem="ia0-QK-03X" secondAttribute="bottom" constant="31" id="rit-4z-CLQ"/>
                             <constraint firstItem="1CS-87-BZ9" firstAttribute="trailing" secondItem="19S-o9-AuX" secondAttribute="trailing" constant="16" id="wz1-le-O90"/>
